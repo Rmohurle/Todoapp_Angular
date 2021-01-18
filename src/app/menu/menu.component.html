@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/welcome/Rahul">Rahul Academy</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="nav-item"><a *ngIf="auth.isLoggedIn()"routerLink="/welcome/Rahul">Home</a></li>
+      <li><a *ngIf="auth.isLoggedIn()" routerLink="/todo">Todo</a></li>
+      <li><a *ngIf="auth.isLoggedIn()"routerLink="#">Workdone</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a *ngIf="!auth.isLoggedIn()"routerLink="/signup"><span class="glyphiconf glyphicon-user"></span> Sign Up</a></li>
+      <li><a *ngIf="!auth.isLoggedIn()"routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><a *ngIf="auth.isLoggedIn()"routerLink="/logout"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+
+    </ul>
+  </div>
+</nav>
+
